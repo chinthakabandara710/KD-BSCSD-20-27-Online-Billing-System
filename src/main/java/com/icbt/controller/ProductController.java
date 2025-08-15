@@ -67,9 +67,11 @@ public class ProductController extends HttpServlet {
 	    private void addProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	        String name = request.getParameter("name");
 	        double price = Double.parseDouble(request.getParameter("price"));
+	        String description = request.getParameter("description");
 	        Product product = new Product();
 	        product.setName(name);
 	        product.setPrice(price);
+	        product.setDescription(description);
 	        productService.addProduct(product);
 	        response.sendRedirect("product?action=list");
 	    }
