@@ -29,18 +29,25 @@ body {
     <p class="lead">Choose what you want to manage</p>
     
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="card">
                 <h3>Product Management</h3>
                 <p>Manage your products efficiently</p>
                 <a href="product?action=list" class="btn btn-primary btn-lg">Manage Products</a>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="card">
                 <h3>Customer Management</h3>
                 <p>Manage customer accounts and details</p>
                 <a href="customer?action=list" class="btn btn-success btn-lg">Manage Customers</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <h3>Bill Management</h3>
+                <p>Generate and manage customer bills</p>
+                <a href="bill?action=list" class="btn btn-success btn-lg">Manage Bills</a>
             </div>
         </div>
     </div>
