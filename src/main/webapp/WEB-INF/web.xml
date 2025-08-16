@@ -10,8 +10,38 @@
   	<description></description>
   	<servlet-class>com.icbt.controller.CustomerController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>CustomerService</servlet-name>
+  	<display-name>CustomerService</display-name>
+  	<description></description>
+  	<servlet-class>com.icbt.service.CustomerService</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Customer</servlet-name>
+  	<display-name>Customer</display-name>
+  	<description></description>
+  	<servlet-class>com.icbt.model.Customer</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CustomerDAO</servlet-name>
+  	<display-name>CustomerDAO</display-name>
+  	<description></description>
+  	<servlet-class>com.icbt.dao.CustomerDAO</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>CustomerController</servlet-name>
   	<url-pattern>/customerCcontroller</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CustomerService</servlet-name>
+  	<url-pattern>/CustomerService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Customer</servlet-name>
+  	<url-pattern>/Customer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CustomerDAO</servlet-name>
+  	<url-pattern>/CustomerDAO</url-pattern>
   </servlet-mapping>
 </web-app>
