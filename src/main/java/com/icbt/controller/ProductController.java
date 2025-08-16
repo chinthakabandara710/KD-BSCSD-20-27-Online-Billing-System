@@ -44,7 +44,7 @@ public class ProductController extends HttpServlet {
 		 String action = request.getParameter("action");
 	        if (action.equals("add")) {
 	            addProduct(request, response);
-	        }else if (action.equals("delete")) {  
+	        }else if (action.equals("delete")) {  // ADD THIS ENTIRE BLOCK
 	            deleteProduct(request, response);
 	        } else if (action.equals("update")) {
 	            updateProduct(request, response);
