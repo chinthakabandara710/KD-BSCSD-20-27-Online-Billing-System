@@ -52,6 +52,36 @@
   	<description></description>
   	<servlet-class>com.icbt.controller.BillController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>User</servlet-name>
+  	<display-name>User</display-name>
+  	<description></description>
+  	<servlet-class>com.icbt.model.User</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UserDAO</servlet-name>
+  	<display-name>UserDAO</display-name>
+  	<description></description>
+  	<servlet-class>com.icbt.dao.UserDAO</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UserService</servlet-name>
+  	<display-name>UserService</display-name>
+  	<description></description>
+  	<servlet-class>com.icbt.service.UserService</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LoginController</servlet-name>
+  	<display-name>LoginController</display-name>
+  	<description></description>
+  	<servlet-class>com.icbt.controller.LoginController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AuthenticationFilter</servlet-name>
+  	<display-name>AuthenticationFilter</display-name>
+  	<description></description>
+  	<servlet-class>com.icbt.filter.AuthenticationFilter</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>CustomerController</servlet-name>
   	<url-pattern>/customerCcontroller</url-pattern>
@@ -83,5 +113,25 @@
   <servlet-mapping>
   	<servlet-name>BillController</servlet-name>
   	<url-pattern>/BillController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>User</servlet-name>
+  	<url-pattern>/User</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UserDAO</servlet-name>
+  	<url-pattern>/UserDAO</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UserService</servlet-name>
+  	<url-pattern>/UserService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LoginController</servlet-name>
+  	<url-pattern>/LoginController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AuthenticationFilter</servlet-name>
+  	<url-pattern>/AuthenticationFilter</url-pattern>
   </servlet-mapping>
 </web-app>
