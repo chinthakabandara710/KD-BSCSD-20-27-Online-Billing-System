@@ -10,78 +10,8 @@
   	<description></description>
   	<servlet-class>com.icbt.controller.CustomerController</servlet-class>
   </servlet>
-  <servlet>
-  	<servlet-name>CustomerService</servlet-name>
-  	<display-name>CustomerService</display-name>
-  	<description></description>
-  	<servlet-class>com.icbt.service.CustomerService</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>Customer</servlet-name>
-  	<display-name>Customer</display-name>
-  	<description></description>
-  	<servlet-class>com.icbt.model.Customer</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>CustomerDAO</servlet-name>
-  	<display-name>CustomerDAO</display-name>
-  	<description></description>
-  	<servlet-class>com.icbt.dao.CustomerDAO</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>Bill</servlet-name>
-  	<display-name>Bill</display-name>
-  	<description></description>
-  	<servlet-class>com.icbt.model.Bill</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>BillDAO</servlet-name>
-  	<display-name>BillDAO</display-name>
-  	<description></description>
-  	<servlet-class>com.icbt.dao.BillDAO</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>BillService</servlet-name>
-  	<display-name>BillService</display-name>
-  	<description></description>
-  	<servlet-class>com.icbt.service.BillService</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>BillController</servlet-name>
-  	<display-name>BillController</display-name>
-  	<description></description>
-  	<servlet-class>com.icbt.controller.BillController</servlet-class>
-  </servlet>
   <servlet-mapping>
   	<servlet-name>CustomerController</servlet-name>
   	<url-pattern>/customerCcontroller</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>CustomerService</servlet-name>
-  	<url-pattern>/CustomerService</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>Customer</servlet-name>
-  	<url-pattern>/Customer</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>CustomerDAO</servlet-name>
-  	<url-pattern>/CustomerDAO</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>Bill</servlet-name>
-  	<url-pattern>/Bill</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>BillDAO</servlet-name>
-  	<url-pattern>/BillDAO</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>BillService</servlet-name>
-  	<url-pattern>/BillService</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>BillController</servlet-name>
-  	<url-pattern>/BillController</url-pattern>
   </servlet-mapping>
 </web-app>
