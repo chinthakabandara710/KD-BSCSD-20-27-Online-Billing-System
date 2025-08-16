@@ -33,6 +33,8 @@ public class ProductController extends HttpServlet {
             listProducts(request, response);
         } else if (action.equals("add")) {
             showAddForm(request, response);
+        } else if (action.equals("edit")) {
+            showEditForm(request, response);
         }
 	}
 
@@ -42,6 +44,10 @@ public class ProductController extends HttpServlet {
 		 String action = request.getParameter("action");
 	        if (action.equals("add")) {
 	            addProduct(request, response);
+	        }else if (action.equals("delete")) {  // ADD THIS ENTIRE BLOCK
+	            deleteProduct(request, response);
+	        } else if (action.equals("update")) {
+	            updateProduct(request, response);
 	        }
 	}
 	
@@ -63,6 +69,19 @@ public class ProductController extends HttpServlet {
 	    private void showAddForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	        request.getRequestDispatcher("WEB-INF/view/addProduct.jsp").forward(request, response);
 	    }
+	    
+	    
+	    private void showEditForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	        int productId = Integer.parseInt(request.getParameter("productId"));
+	        try {
+	            Product product = productService.getProductById(productId);
+	            request.setAttribute("product", product);
+	            request.getRequestDispatcher("WEB-INF/view/editProduct.jsp").forward(request, response);
+	        } catch (SQLException e) {
+	            request.setAttribute("errorMessage", e.getMessage());
+	            request.getRequestDispatcher("WEB-INF/view/error.jsp").forward(request, response);
+	        }
+	    }
 
 	    private void addProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	        String name = request.getParameter("name");
@@ -75,5 +94,40 @@ public class ProductController extends HttpServlet {
 	        productService.addProduct(product);
 	        response.sendRedirect("product?action=list");
 	    }
+	    
+	    private void deleteProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	        int productId = Integer.parseInt(request.getParameter("productId"));
+	        try {
+	            productService.deleteProduct(productId);
+	        } catch ( SQLException e) {
+	            request.setAttribute("errorMessage", e.getMessage());
+	            request.getRequestDispatcher("WEB-INF/view/error.jsp").forward(request, response);
+	            return;
+	        }
+	        response.sendRedirect("product?action=list");
+	    }
+	    
+	    private void updateProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	        int productId = Integer.parseInt(request.getParameter("productId"));
+	        String name = request.getParameter("name");
+	        double price = Double.parseDouble(request.getParameter("price"));
+	        String description = request.getParameter("description");
+	        
+	        Product product = new Product();
+	        product.setProductId(productId);
+	        product.setName(name);
+	        product.setPrice(price);
+	        product.setDescription(description);
+	        
+	        try {
+	            productService.updateProduct(product);
+	        } catch (SQLException e) {
+	            request.setAttribute("errorMessage", e.getMessage());
+	            request.getRequestDispatcher("WEB-INF/view/error.jsp").forward(request, response);
+	            return;
+	        }
+	        response.sendRedirect("product?action=list");
+	    }
+	    
 
 }

@@ -26,6 +26,7 @@
                     <th>Name</th>
                     <th>Price</th>
                     <th>Description</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -35,7 +36,23 @@
                         <td>${product.name}</td>
                         <td class="text-right">${product.price}</td>
                         <td>${product.description}</td>
+             
+					      <td> 
+      		               <div class="btn-group">
+                            <a href="product?action=edit&productId=${product.productId}" 
+                               class="btn btn-warning btn-sm">Edit</a>
+                            <form action="product?action=delete" method="post" style="display:inline;">
+	                                <input type="hidden" name="productId" value="${product.productId}">
+	                                <button type="submit" class="btn btn-danger btn-sm" 
+	                                        onclick="return confirm('Are you sure you want to delete this product?')">
+	                                    Delete
+	                                </button>
+	                            </form>
+	        	                </div>
+	                    </td>
+								
                     </tr>
+                    
                 </c:forEach>
             </tbody>
         </table>
