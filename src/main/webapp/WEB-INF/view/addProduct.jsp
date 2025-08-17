@@ -30,6 +30,10 @@
                 <label for="price">Price:</label>
                 <input type="number" class="form-control" step="0.01" id="price" name="price" required>
             </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <input type="text" class="form-control" id="description" name="description" required>
+            </div>
             <button type="submit" class="btn btn-primary">Add Product</button>
         </form>
     </div>

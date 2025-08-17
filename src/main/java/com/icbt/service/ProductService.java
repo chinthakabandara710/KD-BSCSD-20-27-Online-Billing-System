@@ -35,4 +35,15 @@ public class ProductService {
 	    public List<Product> getAllProducts() throws SQLException {
 	        return productDAO.getAllProducts();
 	    }
+	    
+	    public void deleteProduct(int productId) throws SQLException {
+	        productDAO.deleteProduct(productId);
+	    }
+	    public Product getProductById(int productId) throws SQLException {
+	        return productDAO.getProductById(productId);
+	    }
+	    
+	    public void updateProduct(Product product) throws SQLException {
+	        productDAO.updateProduct(product);
+	    }
 	}
