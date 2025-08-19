@@ -4,17 +4,12 @@ import java.util.Date;
 
 public class Bill {
     
-    private int billId;
-    private int customerId;
-    private String customerName;
-    private String accountNumber;
-    private int productId;
-    private String productName;
-    private double productPrice;
-    private int unitsConsumed;
-    private double totalAmount;
-    private Date billDate;
-    
+	private int billId;
+	private int customerId;
+	private String customerName;
+	private String accountNumber;
+	private double totalAmount;
+	private Date billDate;
     public Bill() {
     }
     
@@ -24,11 +19,7 @@ public class Bill {
         this.billId = billId;
         this.customerId = customerId;
         this.customerName = customerName;
-        this.accountNumber = accountNumber;
-        this.productId = productId;
-        this.productName = productName;
-        this.productPrice = productPrice;
-        this.unitsConsumed = unitsConsumed;
+        this.accountNumber = accountNumber;      
         this.totalAmount = totalAmount;
         this.billDate = billDate;
     }
@@ -65,37 +56,6 @@ public class Bill {
         this.accountNumber = accountNumber;
     }
     
-    public int getProductId() {
-        return productId;
-    }
-    
-    public void setProductId(int productId) {
-        this.productId = productId;
-    }
-    
-    public String getProductName() {
-        return productName;
-    }
-    
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-    
-    public double getProductPrice() {
-        return productPrice;
-    }
-    
-    public void setProductPrice(double productPrice) {
-        this.productPrice = productPrice;
-    }
-    
-    public int getUnitsConsumed() {
-        return unitsConsumed;
-    }
-    
-    public void setUnitsConsumed(int unitsConsumed) {
-        this.unitsConsumed = unitsConsumed;
-    }
     
     public double getTotalAmount() {
         return totalAmount;

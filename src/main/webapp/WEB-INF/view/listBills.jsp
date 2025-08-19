@@ -29,41 +29,36 @@
 <body>
 <div class="container">
     <h1 class="text-center">Bill List</h1>
-    <table class="table table-striped table-bordered">
+	<table class="table table-striped table-bordered">
         <thead class="thead-dark">
             <tr>
-                <th>Bill ID</th>
-                <th>Account No</th>
-                <th>Customer</th>
-                <th>Product</th>
-                <th>Rate</th>
-                <th>Units</th>
-                <th>Total Amount</th>
-                <th>Date</th>
-                <th>Actions</th>
+            <th>Bill ID</th>
+            <th>Account No</th>
+            <th>Customer</th>
+            <th>Total Amount</th>
+            <th>Date</th>
+            <th>Actions</th>
             </tr>
         </thead>
         <tbody>
             <c:forEach var="bill" items="${bills}">
-                <tr>
-                    <td>${bill.billId}</td>
-                    <td>${bill.accountNumber}</td>
-                    <td>${bill.customerName}</td>
-                    <td>${bill.productName}</td>
-                    <td class="text-right">$${bill.productPrice}</td>
-                    <td class="text-center">${bill.unitsConsumed}</td>
-                    <td class="text-right total-amount">$<fmt:formatNumber value="${bill.totalAmount}" pattern="#,##0.00"/></td>
-                    <td><fmt:formatDate value="${bill.billDate}" pattern="yyyy-MM-dd HH:mm"/></td>
-                    <td>
-                        <form action="bill?action=delete" method="post" style="display:inline;">
-                            <input type="hidden" name="billId" value="${bill.billId}">
-                            <button type="submit" class="btn btn-danger btn-sm" 
-                                    onclick="return confirm('Are you sure you want to delete this bill?')">
-                                Delete
-                            </button>
-                        </form>
-                    </td>
-                </tr>
+            <tr>
+            <td>${bill.billId}</td>
+            <td>${bill.accountNumber}</td>
+            <td>${bill.customerName}</td>
+            <td class="text-right total-amount">LKR : <fmt:formatNumber value="${bill.totalAmount}" pattern="#,##0.00"/></td>
+            <td><fmt:formatDate value="${bill.billDate}" pattern="yyyy-MM-dd HH:mm"/></td>
+            <td>
+            <a href="bill?action=view&billId=${bill.billId}" class="btn btn-info btn-sm">View Items</a>
+            <form action="bill?action=delete" method="post" style="display:inline;">
+            <input type="hidden" name="billId" value="${bill.billId}">
+            <button type="submit" class="btn btn-danger btn-sm"
+            onclick="return confirm('Are you sure you want to delete this bill?')">
+            Delete
+            </button>
+            </form>
+            </td>
+            </tr>
             </c:forEach>
         </tbody>
     </table>

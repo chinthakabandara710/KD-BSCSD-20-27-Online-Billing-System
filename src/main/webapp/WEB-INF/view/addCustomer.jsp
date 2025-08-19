@@ -38,10 +38,7 @@
             <label for="telephone">Telephone:</label>
             <input type="tel" class="form-control" id="telephone" name="telephone" required>
         </div>
-        <div class="form-group">
-            <label for="unitsConsumed">Units Consumed:</label>
-            <input type="number" class="form-control" id="unitsConsumed" name="unitsConsumed" min="0" required>
-        </div>
+                <input type="number" class="form-control" id="unitsConsumed" name="unitsConsumed" min="0" value=0 hidden>
         <button type="submit" class="btn btn-primary">Add Customer</button>
     </form>
     <div class="text-center mt-3">

@@ -76,7 +76,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
                         data-name="${product.name}"
                         data-price="${product.price}"
                       >
-                        ${product.name} - $${product.price}
+                        ${product.name} - LKR : ${product.price}
                       </option>
                     </c:forEach>
                   </select>
@@ -107,7 +107,6 @@ uri="http://java.sun.com/jsp/jstl/core" %>
           </div>
         </div>
 
-
         <button type="button" id="addProduct" class="btn btn-info mb-3">
           Add Another Product
         </button>
@@ -127,7 +126,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
             </div>
             <div class="col-md-6">
               <p class="total-display">
-                Total Amount: $<span id="grandTotal">0.00</span>
+                Total Amount: LKR : <span id="grandTotal">0.00</span>
               </p>
             </div>
           </div>
@@ -222,11 +221,11 @@ uri="http://java.sun.com/jsp/jstl/core" %>
 
           productInfo.textContent =
             option.getAttribute("data-name") +
-            " - $" +
+            " - LKR : " +
             price.toFixed(2) +
             " x " +
             quantity;
-          subtotalSpan.textContent = "$" + subtotal.toFixed(2);
+          subtotalSpan.textContent = "LKR : " + subtotal.toFixed(2);
         } else {
           productInfo.textContent = "";
           subtotalSpan.textContent = "";
@@ -256,59 +255,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
       document.addEventListener("DOMContentLoaded", function () {
         attachEventListeners(document.querySelector(".product-row"));
       });
-      /* function updateCustomerInfo() {
-    const select = document.getElementById('customerId');
-    const option = select.options[select.selectedIndex];
     
-    if (option.value) {
-        document.getElementById('selectedCustomer').textContent = option.getAttribute('data-name');
-        document.getElementById('selectedAccount').textContent = option.getAttribute('data-account');
-        
-        const customerUnits = option.getAttribute('data-units');
-        document.getElementById('unitsConsumed').value = customerUnits;
-        calculateTotal();
-    } else {
-        document.getElementById('selectedCustomer').textContent = 'Not selected';
-        document.getElementById('selectedAccount').textContent = 'Not selected';
-        document.getElementById('unitsConsumed').value = '';
-        calculateTotal();
-    }
-}
-
-function updateProductInfo() {
-    const select = document.getElementById('productId');
-    const option = select.options[select.selectedIndex];
-    
-    if (option.value) {
-        document.getElementById('selectedProduct').textContent = option.getAttribute('data-name');
-        document.getElementById('selectedPrice').textContent = parseFloat(option.getAttribute('data-price')).toFixed(2);
-        calculateTotal();
-    } else {
-        document.getElementById('selectedProduct').textContent = 'Not selected';
-        document.getElementById('selectedPrice').textContent = '0.00';
-        calculateTotal();
-    }
-}
-
-function calculateTotal() {
-    const productSelect = document.getElementById('productId');
-    const unitsInput = document.getElementById('unitsConsumed');
-    
-    if (productSelect.value && unitsInput.value) {
-        const option = productSelect.options[productSelect.selectedIndex];
-        const price = parseFloat(option.getAttribute('data-price'));
-        const units = parseInt(unitsInput.value);
-        const total = price * units;
-        
-        document.getElementById('displayPrice').textContent = price.toFixed(2);
-        document.getElementById('displayUnits').textContent = units;
-        document.getElementById('totalAmount').textContent = total.toFixed(2);
-    } else {
-        document.getElementById('displayPrice').textContent = '0.00';
-        document.getElementById('displayUnits').textContent = '0';
-        document.getElementById('totalAmount').textContent = '0.00';
-    }
-} */
     </script>
   </body>
 </html>
