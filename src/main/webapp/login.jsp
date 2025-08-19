@@ -83,9 +83,7 @@ body {
         <button type="submit" class="btn btn-login">Sign In</button>
     </form>
     
-    <div class="register-link">
-        <p>Don't have an account? <a href="register.jsp">Create one here</a></p>
-    </div>
+
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

@@ -36,10 +36,11 @@ body {
     top: 20px;
     right: 20px;
 }
+
 </style>
 </head>
 <body>
-<a href="login?action=logout" class="btn btn-danger btn-sm logout-btn">Logout</a>
+
 
 <div class="container">
     <div class="user-info">
@@ -47,7 +48,7 @@ body {
         <p class="text-muted">Logged in as: ${sessionScope.username} | Role: ${sessionScope.role}</p>
     </div>
     
-    <h1 class="display-4">Management System</h1>
+    <h1 class="display-4">Pahana EDU Dashboard</h1>
     <p class="lead">Choose what you want to manage</p>
     
     <div class="row">
@@ -72,8 +73,22 @@ body {
                 <a href="bill?action=list" class="btn btn-warning btn-lg">Manage Bills</a>
             </div>
         </div>
+             <div class="col-md-4">
+            <div class="card">
+                <h3>Create Member</h3>
+                <p>Add a new member</p>
+                <a href="register.jsp" class="btn btn-warning btn-lg">Create</a>
+            </div>
+            
+        </div>
     </div>
+  <div class="text-center mt-5">
+    <a href="login?action=logout" class="btn btn-danger btn-lg">Logout</a>
 </div>
+    
+
+</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

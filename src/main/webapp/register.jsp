@@ -91,10 +91,7 @@ body {
         </div>
         <button type="submit" class="btn btn-register">Create Account</button>
     </form>
-    
-    <div class="login-link">
-        <p>Already have an account? <a href="login.jsp">Sign in here</a></p>
-    </div>
+
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
