@@ -53,6 +53,47 @@
   	<servlet-class>com.icbt.controller.BillController</servlet-class>
   </servlet>
   <servlet>
+  	<servlet-name>User</servlet-name>
+  	<display-name>User</display-name>
+  	<description></description>
+  	<servlet-class>com.icbt.model.User</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UserDAO</servlet-name>
+  	<display-name>UserDAO</display-name>
+  	<description></description>
+  	<servlet-class>com.icbt.dao.UserDAO</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UserService</servlet-name>
+  	<display-name>UserService</display-name>
+  	<description></description>
+  	<servlet-class>com.icbt.service.UserService</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LoginController</servlet-name>
+  	<display-name>LoginController</display-name>
+  	<description></description>
+  	<servlet-class>com.icbt.controller.LoginController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AuthenticationFilter</servlet-name>
+  	<display-name>AuthenticationFilter</display-name>
+  	<description></description>
+  	<servlet-class>com.icbt.filter.AuthenticationFilter</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Auth</servlet-name>
+  	<display-name>Auth</display-name>
+  	<description></description>
+  	<servlet-class>com.icbt.auth.Auth</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AuthController</servlet-name>
+  	<display-name>AuthController</display-name>
+  	<description></description>
+  	<servlet-class>com.icbt.controller.AuthController</servlet-class>
+  </servlet>
   	<servlet-name>OrderItem</servlet-name>
   	<display-name>OrderItem</display-name>
   	<description></description>
@@ -97,6 +138,10 @@
   	<url-pattern>/BillController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AuthController</servlet-name>
+  	<url-pattern>/AuthController</url-pattern>
+  </servlet-mapping>
   	<servlet-name>OrderItem</servlet-name>
   	<url-pattern>/OrderItem</url-pattern>
   </servlet-mapping>

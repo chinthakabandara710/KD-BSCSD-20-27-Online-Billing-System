@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,11 +24,31 @@ body {
     margin: 20px;
     padding: 20px;
 }
+.user-info {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.logout-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
 </style>
 </head>
 <body>
+
+
 <div class="container">
-    <h1 class="display-4">Management System</h1>
+    <div class="user-info">
+        <h5>Welcome, ${sessionScope.fullName}!</h5>
+        <p class="text-muted">Logged in as: ${sessionScope.username} | Role: ${sessionScope.role}</p>
+    </div>
+    
+    <h1 class="display-4">Pahana EDU Dashboard</h1>
     <p class="lead">Choose what you want to manage</p>
     
     <div class="row">
@@ -47,11 +70,25 @@ body {
             <div class="card">
                 <h3>Bill Management</h3>
                 <p>Generate and manage customer bills</p>
-                <a href="bill?action=list" class="btn btn-success btn-lg">Manage Bills</a>
+                <a href="bill?action=list" class="btn btn-warning btn-lg">Manage Bills</a>
             </div>
         </div>
+             <div class="col-md-4">
+            <div class="card">
+                <h3>Create Member</h3>
+                <p>Add a new member</p>
+                <a href="register.jsp" class="btn btn-warning btn-lg">Create</a>
+            </div>
+            
+        </div>
     </div>
+  <div class="text-center mt-5">
+    <a href="login?action=logout" class="btn btn-danger btn-lg">Logout</a>
 </div>
+    
+
+</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
