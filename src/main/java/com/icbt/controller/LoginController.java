@@ -81,8 +81,7 @@ public class LoginController extends HttpServlet {
         
         try {
             if (userService.registerUser(user)) {
-                request.setAttribute("successMessage", "Registration successful! Please login.");
-                request.getRequestDispatcher("login.jsp").forward(request, response);
+                request.getRequestDispatcher("index.jsp").forward(request, response);
             } else {
                 request.setAttribute("errorMessage", "Username already exists");
                 request.getRequestDispatcher("register.jsp").forward(request, response);

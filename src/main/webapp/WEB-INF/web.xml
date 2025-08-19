@@ -94,6 +94,7 @@
   	<description></description>
   	<servlet-class>com.icbt.controller.AuthController</servlet-class>
   </servlet>
+  <servlet>
   	<servlet-name>OrderItem</servlet-name>
   	<display-name>OrderItem</display-name>
   	<description></description>
@@ -138,15 +139,8 @@
   	<url-pattern>/BillController</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  <servlet-mapping>
   	<servlet-name>AuthController</servlet-name>
   	<url-pattern>/AuthController</url-pattern>
   </servlet-mapping>
-  	<servlet-name>OrderItem</servlet-name>
-  	<url-pattern>/OrderItem</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>OrderItemDAO</servlet-name>
-  	<url-pattern>/OrderItemDAO</url-pattern>
-  </servlet-mapping>
+
 </web-app>
