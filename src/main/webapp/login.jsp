@@ -5,61 +5,90 @@
 <html>
 <head>
 <title>Login - Management System</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <style>
 body {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: linear-gradient(135deg, #e3f2fd, #ffffff);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .login-container {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    max-width: 400px;
-    width: 100%;
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(13, 71, 161, 0.10);
+  padding: 40px 32px 32px 32px;
+  max-width: 400px;
+  width: 100%;
+  margin: 32px 0;
 }
 .login-header {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 .login-header h2 {
-    color: #333;
-    font-weight: 600;
+  color: #0d47a1;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.login-header .bi {
+  font-size: 2.5rem;
+  color: #0d47a1;
+  margin-bottom: 0.5rem;
 }
 .form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+}
+.form-control {
+  border-radius: 0.5rem;
+  border: 1px solid #dee2e6;
+  background: #f8f9fa;
 }
 .btn-login {
-    width: 100%;
-    padding: 12px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-weight: 500;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, #0d47a1, #1976d2);
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.btn-login .bi {
+  font-size: 1.2rem;
+  margin: 0.3rem 0 0 0;
+  color: white;
 }
 .btn-login:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    color: white;
+  background: linear-gradient(45deg, #1976d2, #0d47a1);
+  color: white;
 }
 .register-link {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 .alert {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+}
+@media (max-width: 575.98px) {
+  .login-container {
+    padding: 24px 8px 16px 8px;
+  }
 }
 </style>
 </head>
 <body>
 <div class="login-container">
     <div class="login-header">
-        <h2>Management System</h2>
+        <i class="bi bi-journal-bookmark"></i>
+        <h2>Pahana EDU</h2>
         <p class="text-muted">Please sign in to continue</p>
     </div>
     
@@ -80,7 +109,7 @@ body {
             <label for="password">Password:</label>
             <input type="password" class="form-control" id="password" name="password" required>
         </div>
-        <button type="submit" class="btn btn-login">Sign In</button>
+        <button type="submit" class="btn btn-login"><span>Sign In</span><i class="bi bi-box-arrow-in-right"></i></button>
     </form>
     
 
